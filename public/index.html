@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canadian Summer 2025 Internships</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Canadian Summer 2025 Internships</h1>
+      <p id="update-message">Loading latest internship opportunities...</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Total Internships</h3>
+        <p id="total-count">-</p>
+      </div>
+      <div class="stat-card">
+        <h3>New Today</h3>
+        <p id="new-count">-</p>
+      </div>
+      <div class="stat-card">
+        <h3>Popular Cities</h3>
+        <p id="top-city">-</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search by company, role, or location..." />
+      </div>
+
+      <div class="filter-controls">
+        <select id="location-filter">
+          <option value="all">All Locations</option>
+        </select>
+      </div>
+
+      <button id="refresh-btn">Refresh Data</button>
+    </div>
+
+    <table id="internships-table">
+      <thead>
+        <tr>
+          <th data-sort="company">Company</th>
+          <th data-sort="role">Role</th>
+          <th data-sort="location">Location</th>
+          <th data-sort="datePosted">Date Posted</th>
+          <th data-sort="firstSeen">First Seen</th>
+          <th>Apply</th>
+        </tr>
+      </thead>
+      <tbody id="internships-body">
+        <tr>
+          <td colspan="6" style="text-align: center">Loading internship data...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prev-page" disabled>Previous</button>
+      <span class="current-page">Page <span id="current-page-num">1</span></span>
+      <button id="next-page" disabled>Next</button>
+    </div>
+    <div class="pagination-info">Showing <span id="showing-start">0</span>-<span id="showing-end">0</span> of <span id="total-items">0</span> internships</div>
+
+    <div class="last-updated">Last updated: <span id="last-updated-time">loading...</span></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
