@@ -102,14 +102,15 @@ function isNewJob(job) {
 // Load internship data
 async function loadInternshipData() {
   try {
-    const response = await fetch("/canada_internships_data.json");
+    const response = await fetch("https://mfon-19.github.io/internship_scraper/canada_internships_data.json");
     if (!response.ok) {
-      throw new Error("Failed to load internship data");
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
     return cleanInternshipData(data); // Clean the data before returning
   } catch (error) {
     console.error("Error loading internship data:", error);
+    document.getElementById("internships").innerHTML = '<tr><td colspan="4">Error loading internship data</td></tr>';
     // Fall back to demo data if fetch fails
     return {
       lastChecked: new Date().toISOString(),
