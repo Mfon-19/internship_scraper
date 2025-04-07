@@ -1,9 +1,9 @@
 name: Update Internship Data
 
-on:
-  schedule:
-    - cron: 0 0 * * *  # Run every day at midnight
-  workflow_dispatch: # Allow manual triggers
+# on:
+#   schedule:
+#     - cron: 0 0 * * *  # Run every day at midnight
+#   workflow_dispatch: # Allow manual triggers
 
 jobs:
   update-data:
